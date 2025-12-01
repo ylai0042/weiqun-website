@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initModals();
     initFormValidation();
     initAnimations();
+    initHeroVideo();
 });
 
 // 导航功能
@@ -15,6 +16,7 @@ function initNavigation() {
     const navLinks = document.querySelectorAll('.nav-menu a');
     const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('.nav-menu');
+    const categoryCards = document.querySelectorAll('.category-card');
     
     // 滚动时导航栏样式变化
     window.addEventListener('scroll', () => {
@@ -23,6 +25,24 @@ function initNavigation() {
         } else {
             navbar.classList.remove('scrolled');
         }
+    });
+    
+    // 产品分类卡片点击事件
+    categoryCards.forEach(card => {
+        card.addEventListener('click', () => {
+            const category = card.dataset.category;
+            const productsSection = document.getElementById('products');
+            if (productsSection) {
+                productsSection.scrollIntoView({ behavior: 'smooth' });
+                // 触发产品筛选
+                setTimeout(() => {
+                    const categoryBtn = document.querySelector(`[data-category="${category}"]`);
+                    if (categoryBtn) {
+                        categoryBtn.click();
+                    }
+                }, 500);
+            }
+        });
     });
     
     // 移动端菜单切换
@@ -455,6 +475,52 @@ const utils = {
         return emailRegex.test(email);
     }
 };
+
+// Hero视频功能
+function initHeroVideo() {
+    const heroVideo = document.querySelector('.hero-video-bg');
+    const scrollIndicator = document.querySelector('.scroll-indicator');
+    
+    // 确保视频自动播放
+    if (heroVideo) {
+        heroVideo.addEventListener('loadedmetadata', () => {
+            heroVideo.play().catch(err => {
+                console.log('视频自动播放失败，可能需要用户交互:', err);
+            });
+        });
+        
+        // 处理视频加载错误，显示备用背景
+        heroVideo.addEventListener('error', () => {
+            console.log('视频加载失败，使用备用背景');
+            const wrapper = document.querySelector('.hero-video-wrapper');
+            if (wrapper) {
+                wrapper.style.background = 'linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #1e3c72 100%)';
+            }
+        });
+    }
+    
+    // 滚动指示器点击事件
+    if (scrollIndicator) {
+        scrollIndicator.addEventListener('click', () => {
+            const productsSection = document.getElementById('products');
+            if (productsSection) {
+                productsSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    }
+    
+    // 视频播放控制（可选：添加播放/暂停按钮）
+    const videoControls = document.querySelector('.hero-video-controls');
+    if (videoControls && heroVideo) {
+        videoControls.addEventListener('click', () => {
+            if (heroVideo.paused) {
+                heroVideo.play();
+            } else {
+                heroVideo.pause();
+            }
+        });
+    }
+}
 
 // 导出工具函数供其他脚本使用
 window.utils = utils;

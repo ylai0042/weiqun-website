@@ -33,6 +33,39 @@ class MultiLanguageSystem {
                 stat_clients: '客户',
                 stat_products: '产品',
                 
+                // 产品特色
+                feature_quality: '最高品质',
+                feature_quality_desc: '使用优质材料，严格质量控制，确保产品耐用可靠',
+                feature_fast: '快速交付',
+                feature_fast_desc: '高效生产流程，快速物流配送，确保及时送达',
+                feature_custom: '定制服务',
+                feature_custom_desc: '专业设计团队，支持OEM/ODM，满足您的个性化需求',
+                feature_global: '全球出口',
+                feature_global_desc: '产品出口至多个国家，丰富的国际市场经验',
+                
+                // 热门尺寸
+                popular_sizes_title: '热门产品尺寸',
+                popular_sizes_subtitle: '我们提供多种标准尺寸，也可根据您的需求定制',
+                size_10x10: '适合小型活动',
+                size_20x20: '中型活动首选',
+                size_20x30: '展览展示',
+                size_30x60: '大型活动',
+                size_40x60: '大型展览',
+                size_40x100: '超大型活动',
+                
+                // 客户评价
+                testimonials_title: '客户评价',
+                testimonials_subtitle: '来自全球客户的真实反馈',
+                testimonial_1_text: '"产品质量非常好，服务专业，交付及时。我们非常满意与伟群的合作。"',
+                testimonial_1_name: 'David T.',
+                testimonial_1_role: '活动策划公司',
+                testimonial_2_text: '"定制服务非常专业，能够满足我们的特殊需求。产品质量超出预期。"',
+                testimonial_2_name: 'Antonio C.',
+                testimonial_2_role: '餐厅老板',
+                testimonial_3_text: '"团队非常专业，响应迅速。产品设计精美，完全符合我们的品牌形象。"',
+                testimonial_3_name: 'Owen B.',
+                testimonial_3_role: '娱乐行业',
+                
                 // 产品中心
                 products_title: '产品中心',
                 products_subtitle: '多样化的户外家具和展示产品，满足您的各种需求',
@@ -41,6 +74,24 @@ class MultiLanguageSystem {
                 category_tents: '帐篷展示',
                 category_flags: '旗帜广告',
                 category_custom: '定制产品',
+                category_popup: '快幕秀',
+                category_frames: '帐篷框架',
+                
+                // 顶部栏
+                top_bar_text: '服务企业超过15年！值得信赖的客户服务！',
+                
+                // 导航
+                nav_products_by_size: '按尺寸',
+                nav_info: '信息',
+                
+                // 产品分类
+                product_categories_title: '产品分类',
+                category_tents_desc: '专业帐篷产品，适用于各种活动场景',
+                category_flags_desc: '沙滩旗、横幅等广告展示产品',
+                category_popup_desc: '快速搭建的展示系统',
+                category_furniture_desc: '可折叠桌椅等户外家具',
+                category_frames_desc: '专业帐篷框架和配件',
+                category_custom_desc: '根据需求定制专属产品',
                 
                 // 服务范围
                 services_title: '服务范围',
@@ -81,7 +132,14 @@ class MultiLanguageSystem {
                 // PDF下载
                 pdf_download_title: '下载产品资料',
                 pdf_download_desc: '点击下方按钮下载完整的产品目录和公司介绍。',
-                btn_download_pdf: '下载PDF'
+                btn_download_pdf: '下载PDF',
+                
+                // 购物车
+                cart_title: '购物车',
+                cart_total: '总计:',
+                cart_clear: '清空购物车',
+                cart_checkout: '联系询价',
+                cart_empty: '购物车是空的'
             },
             en: {
                 // Navigation
@@ -113,6 +171,39 @@ class MultiLanguageSystem {
                 stat_clients: 'Clients',
                 stat_products: 'Products',
                 
+                // Features
+                feature_quality: 'Highest Quality',
+                feature_quality_desc: 'Using premium materials, strict quality control, ensuring durable and reliable products',
+                feature_fast: 'Fast Delivery',
+                feature_fast_desc: 'Efficient production process, fast logistics delivery, ensuring timely arrival',
+                feature_custom: 'Customization Service',
+                feature_custom_desc: 'Professional design team, supporting OEM/ODM, meeting your personalized needs',
+                feature_global: 'Global Export',
+                feature_global_desc: 'Products exported to multiple countries, rich international market experience',
+                
+                // Popular Sizes
+                popular_sizes_title: 'Popular Product Sizes',
+                popular_sizes_subtitle: 'We offer various standard sizes, and can customize according to your needs',
+                size_10x10: 'Suitable for small events',
+                size_20x20: 'Preferred for medium events',
+                size_20x30: 'Exhibitions and displays',
+                size_30x60: 'Large events',
+                size_40x60: 'Large exhibitions',
+                size_40x100: 'Extra large events',
+                
+                // Testimonials
+                testimonials_title: 'Customer Reviews',
+                testimonials_subtitle: 'Real feedback from customers worldwide',
+                testimonial_1_text: '"Excellent product quality, professional service, timely delivery. We are very satisfied with our cooperation with Weiqun."',
+                testimonial_1_name: 'David T.',
+                testimonial_1_role: 'Event Planning Company',
+                testimonial_2_text: '"Very professional customization service, able to meet our special needs. Product quality exceeded expectations."',
+                testimonial_2_name: 'Antonio C.',
+                testimonial_2_role: 'Restaurant Owner',
+                testimonial_3_text: '"Very professional team, quick response. Beautiful product design, perfectly matches our brand image."',
+                testimonial_3_name: 'Owen B.',
+                testimonial_3_role: 'Entertainment Industry',
+                
                 // Products
                 products_title: 'Product Center',
                 products_subtitle: 'Diverse outdoor furniture and display products to meet your various needs',
@@ -121,6 +212,24 @@ class MultiLanguageSystem {
                 category_tents: 'Tent Display',
                 category_flags: 'Flag Advertising',
                 category_custom: 'Custom Products',
+                category_popup: 'Pop-up Display',
+                category_frames: 'Tent Frame',
+                
+                // Top Bar
+                top_bar_text: 'Serving businesses for over 15 years! Customer service you can trust!',
+                
+                // Navigation
+                nav_products_by_size: 'By Size',
+                nav_info: 'Information',
+                
+                // Product Categories
+                product_categories_title: 'Product Categories',
+                category_tents_desc: 'Professional tent products for various event scenarios',
+                category_flags_desc: 'Beach flags, banners and advertising display products',
+                category_popup_desc: 'Quick-setup display systems',
+                category_furniture_desc: 'Foldable tables and chairs for outdoor use',
+                category_frames_desc: 'Professional tent frames and accessories',
+                category_custom_desc: 'Custom products tailored to your needs',
                 
                 // Services
                 services_title: 'Service Range',
@@ -161,7 +270,14 @@ class MultiLanguageSystem {
                 // PDF Download
                 pdf_download_title: 'Download Product Information',
                 pdf_download_desc: 'Click the button below to download the complete product catalog and company introduction.',
-                btn_download_pdf: 'Download PDF'
+                btn_download_pdf: 'Download PDF',
+                
+                // Shopping Cart
+                cart_title: 'Shopping Cart',
+                cart_total: 'Total:',
+                cart_clear: 'Clear Cart',
+                cart_checkout: 'Request Quote',
+                cart_empty: 'Your cart is empty'
             },
             ja: {
                 // ナビゲーション
@@ -191,6 +307,39 @@ class MultiLanguageSystem {
                 stat_years: '年の業界経験',
                 stat_clients: '満足したクライアント',
                 stat_products: '製品タイプ',
+                
+                // 製品特徴
+                feature_quality: '最高品質',
+                feature_quality_desc: '高品質材料を使用し、厳格な品質管理により、製品の耐久性と信頼性を確保',
+                feature_fast: '迅速な配送',
+                feature_fast_desc: '効率的な生産プロセス、迅速な物流配送により、タイムリーな到着を確保',
+                feature_custom: 'カスタマイズサービス',
+                feature_custom_desc: 'プロフェッショナルなデザインチーム、OEM/ODM対応、お客様の個別ニーズに対応',
+                feature_global: 'グローバル輸出',
+                feature_global_desc: '複数の国に製品を輸出、豊富な国際市場経験',
+                
+                // 人気サイズ
+                popular_sizes_title: '人気製品サイズ',
+                popular_sizes_subtitle: '様々な標準サイズを提供、お客様のニーズに応じてカスタマイズ可能',
+                size_10x10: '小型イベントに適しています',
+                size_20x20: '中型イベントに最適',
+                size_20x30: '展示・展示会',
+                size_30x60: '大型イベント',
+                size_40x60: '大型展示会',
+                size_40x100: '超大型イベント',
+                
+                // お客様の声
+                testimonials_title: 'お客様の声',
+                testimonials_subtitle: '世界中のお客様からの実際のフィードバック',
+                testimonial_1_text: '"製品品質は非常に優れており、サービスもプロフェッショナルで、配送も迅速でした。ウェイチュンとの協力に非常に満足しています。"',
+                testimonial_1_name: 'David T.',
+                testimonial_1_role: 'イベント企画会社',
+                testimonial_2_text: '"カスタマイズサービスは非常にプロフェッショナルで、私たちの特別なニーズに対応できました。製品品質は期待を超えました。"',
+                testimonial_2_name: 'Antonio C.',
+                testimonial_2_role: 'レストランオーナー',
+                testimonial_3_text: '"チームは非常にプロフェッショナルで、対応も迅速でした。製品デザインは美しく、私たちのブランドイメージに完全に一致しています。"',
+                testimonial_3_name: 'Owen B.',
+                testimonial_3_role: 'エンターテインメント業界',
                 
                 // 製品センター
                 products_title: '製品センター',
@@ -267,6 +416,39 @@ class MultiLanguageSystem {
                 stat_years: '년 업계 경험',
                 stat_clients: '만족한 고객',
                 stat_products: '제품 유형',
+                
+                // 제품 특징
+                feature_quality: '최고 품질',
+                feature_quality_desc: '고품질 소재 사용, 엄격한 품질 관리로 제품의 내구성과 신뢰성 보장',
+                feature_fast: '빠른 배송',
+                feature_fast_desc: '효율적인 생산 프로세스, 빠른 물류 배송으로 적시 도착 보장',
+                feature_custom: '맞춤 서비스',
+                feature_custom_desc: '전문 디자인 팀, OEM/ODM 지원, 고객의 개별 요구사항 충족',
+                feature_global: '글로벌 수출',
+                feature_global_desc: '여러 국가로 제품 수출, 풍부한 국제 시장 경험',
+                
+                // 인기 사이즈
+                popular_sizes_title: '인기 제품 사이즈',
+                popular_sizes_subtitle: '다양한 표준 사이즈 제공, 고객 요구에 따라 맞춤 제작 가능',
+                size_10x10: '소규모 이벤트에 적합',
+                size_20x20: '중형 이벤트에 최적',
+                size_20x30: '전시 및 전시회',
+                size_30x60: '대형 이벤트',
+                size_40x60: '대형 전시회',
+                size_40x100: '초대형 이벤트',
+                
+                // 고객 후기
+                testimonials_title: '고객 후기',
+                testimonials_subtitle: '전 세계 고객들의 실제 피드백',
+                testimonial_1_text: '"제품 품질이 매우 우수하고, 서비스도 전문적이며, 배송도 신속했습니다. 웨이췬과의 협력에 매우 만족합니다."',
+                testimonial_1_name: 'David T.',
+                testimonial_1_role: '이벤트 기획 회사',
+                testimonial_2_text: '"맞춤 서비스가 매우 전문적이며, 우리의 특별한 요구사항을 충족할 수 있었습니다. 제품 품질은 기대를 뛰어넘었습니다."',
+                testimonial_2_name: 'Antonio C.',
+                testimonial_2_role: '레스토랑 사장',
+                testimonial_3_text: '"팀이 매우 전문적이며, 대응도 신속했습니다. 제품 디자인이 아름답고, 우리의 브랜드 이미지와 완벽하게 일치합니다."',
+                testimonial_3_name: 'Owen B.',
+                testimonial_3_role: '엔터테인먼트 업계',
                 
                 // 제품센터
                 products_title: '제품센터',

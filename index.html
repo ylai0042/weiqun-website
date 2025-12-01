@@ -6,6 +6,7 @@
     <title>广西伟群帐篷制造有限公司 - 专业帐篷制造</title>
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/multilang.css">
+    <link rel="stylesheet" href="styles/cart.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -18,23 +19,56 @@
         <button class="lang-btn" data-lang="ko">한국어</button>
     </div>
 
+    <!-- 顶部提示栏 -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-content">
+                <span data-translate="top_bar_text">服务企业超过15年！值得信赖的客户服务！</span>
+            </div>
+        </div>
+    </div>
+
     <!-- 导航栏 -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
                 <img src="images/waikwan_logo_small.png" alt="WAI KWAN COMPANY" class="nav-logo-img">
                 <div class="nav-logo-text">
-                    <h1 data-translate="company_name">广西伟群帐篷公司</h1>
-                    <span data-translate="tagline">专业户外家具制造商</span>
+                    <h1 data-translate="company_name">伟群帐篷</h1>
                 </div>
             </div>
             <ul class="nav-menu">
-                <li><a href="#home" data-translate="nav_home">首页</a></li>
-                <li><a href="#about" data-translate="nav_about">公司介绍</a></li>
-                <li><a href="#products" data-translate="nav_products">产品中心</a></li>
-                <li><a href="#services" data-translate="nav_services">服务范围</a></li>
-                <li><a href="#contact" data-translate="nav_contact">联系我们</a></li>
+                <li class="nav-item-dropdown">
+                    <a href="#products" data-translate="nav_products">产品 <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#products" data-translate="category_tents">帐篷展示</a></li>
+                        <li><a href="#products" data-translate="category_flags">旗帜广告</a></li>
+                        <li><a href="#products" data-translate="category_furniture">户外家具</a></li>
+                        <li><a href="#products" data-translate="category_custom">定制产品</a></li>
+                    </ul>
+                </li>
+                <li><a href="#products" data-translate="nav_products_by_size">按尺寸</a></li>
+                <li class="nav-item-dropdown">
+                    <a href="#about" data-translate="nav_info">信息 <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#about" data-translate="nav_about">关于我们</a></li>
+                        <li><a href="#services" data-translate="nav_services">服务范围</a></li>
+                        <li><a href="#contact" data-translate="nav_contact">联系我们</a></li>
+                    </ul>
+                </li>
             </ul>
+            <div class="nav-actions">
+                <button class="nav-icon-btn" id="searchBtn" aria-label="搜索">
+                    <i class="fas fa-search"></i>
+                </button>
+                <button class="nav-icon-btn" id="accountBtn" aria-label="账户">
+                    <i class="fas fa-user"></i>
+                </button>
+                <button class="nav-icon-btn" id="cartBtn" aria-label="购物车">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-badge">0</span>
+                </button>
+            </div>
             <div class="hamburger">
                 <span></span>
                 <span></span>
@@ -45,37 +79,31 @@
 
     <!-- 主要内容 -->
     <main>
-        <!-- 首页横幅 -->
-        <section id="home" class="hero">
-            <div class="hero-background">
-                <div class="hero-pattern"></div>
-                <div class="hero-gradient"></div>
+        <!-- 首页横幅 - 视频背景 -->
+        <section id="home" class="hero hero-video">
+            <!-- 视频背景 -->
+            <div class="hero-video-wrapper">
+                <video class="hero-video-bg" autoplay muted loop playsinline>
+                    <source src="videos/hero-video.mp4" type="video/mp4">
+                    <source src="videos/hero-video.webm" type="video/webm">
+                    <!-- 如果视频无法加载，显示备用图片 -->
+                    <img src="images/hero-backup.jpg" alt="Hero Background">
+                </video>
+                <div class="hero-video-overlay"></div>
             </div>
+            
+            <!-- Hero内容 -->
             <div class="container">
                 <div class="hero-content">
                     <div class="hero-text">
                         <div class="hero-badge">
                             <span data-translate="hero_badge">专业制造</span>
                         </div>
-                        <h1 data-translate="hero_title">专业的户外家具制造解决方案</h1>
-                        <p data-translate="hero_subtitle">为您的品牌提供高质量、创新性的户外家具和展示产品，致力于成为您最可靠的制造伙伴</p>
-                        <div class="hero-stats">
-                            <div class="stat-item">
-                                <span class="stat-number">15+</span>
-                                <span class="stat-label">年经验</span>
-                            </div>
-                            <div class="stat-item">
-                                <span class="stat-number">500+</span>
-                                <span class="stat-label">客户</span>
-                            </div>
-                            <div class="stat-item">
-                                <span class="stat-number">100+</span>
-                                <span class="stat-label">产品</span>
-                            </div>
-                        </div>
+                        <h1 data-translate="hero_title">专业的帐篷和户外展示产品制造解决方案</h1>
+                        <p data-translate="hero_subtitle">为您的品牌提供高质量、创新性的帐篷、快幕秀、沙滩旗和展示产品，致力于成为您最可靠的制造伙伴</p>
                         <div class="hero-buttons">
                             <a href="#products" class="btn btn-primary" data-translate="btn_explore">
-                                <span>探索产品</span>
+                                <span>浏览产品</span>
                                 <i class="fas fa-arrow-right"></i>
                             </a>
                             <a href="#contact" class="btn btn-secondary" data-translate="btn_contact">
@@ -84,19 +112,12 @@
                             </a>
                         </div>
                     </div>
-                    <div class="hero-visual">
-                        <div class="hero-logo-container">
-                            <div class="logo-background">
-                                <img src="images/waikwan_logo_large.png" alt="WAI KWAN COMPANY" class="hero-logo">
-                            </div>
-                            <div class="floating-elements">
-                                <div class="floating-shape shape-1"></div>
-                                <div class="floating-shape shape-2"></div>
-                                <div class="floating-shape shape-3"></div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
+            </div>
+            
+            <!-- 滚动提示 -->
+            <div class="scroll-indicator">
+                <i class="fas fa-chevron-down"></i>
             </div>
         </section>
 
@@ -139,6 +160,137 @@
             </div>
         </section>
 
+        <!-- 产品特色展示 -->
+        <section class="features">
+            <div class="container">
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <h3 data-translate="feature_quality">最高品质</h3>
+                        <p data-translate="feature_quality_desc">使用优质材料，严格质量控制，确保产品耐用可靠</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-shipping-fast"></i>
+                        </div>
+                        <h3 data-translate="feature_fast">快速交付</h3>
+                        <p data-translate="feature_fast_desc">高效生产流程，快速物流配送，确保及时送达</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                        <h3 data-translate="feature_custom">定制服务</h3>
+                        <p data-translate="feature_custom_desc">专业设计团队，支持OEM/ODM，满足您的个性化需求</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <h3 data-translate="feature_global">全球出口</h3>
+                        <p data-translate="feature_global_desc">产品出口至多个国家，丰富的国际市场经验</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 热门产品尺寸 -->
+        <section class="popular-sizes">
+            <div class="container">
+                <div class="section-header">
+                    <h2 data-translate="popular_sizes_title">热门产品尺寸</h2>
+                    <p data-translate="popular_sizes_subtitle">我们提供多种标准尺寸，也可根据您的需求定制</p>
+                </div>
+                <div class="sizes-grid">
+                    <div class="size-item">
+                        <div class="size-badge">热销</div>
+                        <h3>10x10</h3>
+                        <p data-translate="size_10x10">适合小型活动</p>
+                    </div>
+                    <div class="size-item">
+                        <div class="size-badge">热销</div>
+                        <h3>20x20</h3>
+                        <p data-translate="size_20x20">中型活动首选</p>
+                    </div>
+                    <div class="size-item">
+                        <div class="size-badge">热销</div>
+                        <h3>20x30</h3>
+                        <p data-translate="size_20x30">展览展示</p>
+                    </div>
+                    <div class="size-item">
+                        <div class="size-badge">热销</div>
+                        <h3>30x60</h3>
+                        <p data-translate="size_30x60">大型活动</p>
+                    </div>
+                    <div class="size-item">
+                        <div class="size-badge">热销</div>
+                        <h3>40x60</h3>
+                        <p data-translate="size_40x60">大型展览</p>
+                    </div>
+                    <div class="size-item">
+                        <div class="size-badge">热销</div>
+                        <h3>40x100</h3>
+                        <p data-translate="size_40x100">超大型活动</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 产品分类展示 -->
+        <section class="product-categories-showcase">
+            <div class="container">
+                <div class="section-header">
+                    <h2 data-translate="product_categories_title">产品分类</h2>
+                </div>
+                <div class="categories-grid">
+                    <div class="category-card" data-category="tents">
+                        <div class="category-image">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <h3 data-translate="category_tents">帐篷展示</h3>
+                        <p data-translate="category_tents_desc">专业帐篷产品，适用于各种活动场景</p>
+                    </div>
+                    <div class="category-card" data-category="flags">
+                        <div class="category-image">
+                            <i class="fas fa-flag"></i>
+                        </div>
+                        <h3 data-translate="category_flags">旗帜广告</h3>
+                        <p data-translate="category_flags_desc">沙滩旗、横幅等广告展示产品</p>
+                    </div>
+                    <div class="category-card" data-category="popup">
+                        <div class="category-image">
+                            <i class="fas fa-cube"></i>
+                        </div>
+                        <h3 data-translate="category_popup">快幕秀</h3>
+                        <p data-translate="category_popup_desc">快速搭建的展示系统</p>
+                    </div>
+                    <div class="category-card" data-category="furniture">
+                        <div class="category-image">
+                            <i class="fas fa-chair"></i>
+                        </div>
+                        <h3 data-translate="category_furniture">户外家具</h3>
+                        <p data-translate="category_furniture_desc">可折叠桌椅等户外家具</p>
+                    </div>
+                    <div class="category-card" data-category="frames">
+                        <div class="category-image">
+                            <i class="fas fa-th"></i>
+                        </div>
+                        <h3 data-translate="category_frames">帐篷框架</h3>
+                        <p data-translate="category_frames_desc">专业帐篷框架和配件</p>
+                    </div>
+                    <div class="category-card" data-category="custom">
+                        <div class="category-image">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                        <h3 data-translate="category_custom">定制产品</h3>
+                        <p data-translate="category_custom_desc">根据需求定制专属产品</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- 产品中心 -->
         <section id="products" class="products">
             <div class="container">
@@ -149,14 +301,68 @@
                 
                 <div class="product-categories">
                     <button class="category-btn active" data-category="all" data-translate="category_all">全部产品</button>
-                    <button class="category-btn" data-category="furniture" data-translate="category_furniture">户外家具</button>
                     <button class="category-btn" data-category="tents" data-translate="category_tents">帐篷展示</button>
                     <button class="category-btn" data-category="flags" data-translate="category_flags">旗帜广告</button>
+                    <button class="category-btn" data-category="furniture" data-translate="category_furniture">户外家具</button>
                     <button class="category-btn" data-category="custom" data-translate="category_custom">定制产品</button>
                 </div>
 
                 <div class="products-grid">
                     <!-- 产品项目将通过JavaScript动态加载 -->
+                </div>
+            </div>
+        </section>
+
+        <!-- 客户评价 -->
+        <section class="testimonials">
+            <div class="container">
+                <div class="section-header">
+                    <h2 data-translate="testimonials_title">客户评价</h2>
+                    <p data-translate="testimonials_subtitle">来自全球客户的真实反馈</p>
+                </div>
+                <div class="testimonials-grid">
+                    <div class="testimonial-item">
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text" data-translate="testimonial_1_text">"产品质量非常好，服务专业，交付及时。我们非常满意与伟群的合作。"</p>
+                        <div class="testimonial-author">
+                            <strong data-translate="testimonial_1_name">David T.</strong>
+                            <span data-translate="testimonial_1_role">活动策划公司</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-item">
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text" data-translate="testimonial_2_text">"定制服务非常专业，能够满足我们的特殊需求。产品质量超出预期。"</p>
+                        <div class="testimonial-author">
+                            <strong data-translate="testimonial_2_name">Antonio C.</strong>
+                            <span data-translate="testimonial_2_role">餐厅老板</span>
+                        </div>
+                    </div>
+                    <div class="testimonial-item">
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text" data-translate="testimonial_3_text">"团队非常专业，响应迅速。产品设计精美，完全符合我们的品牌形象。"</p>
+                        <div class="testimonial-author">
+                            <strong data-translate="testimonial_3_name">Owen B.</strong>
+                            <span data-translate="testimonial_3_role">娱乐行业</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -325,6 +531,7 @@
     <script src="scripts/main.js"></script>
     <script src="scripts/multilang.js"></script>
     <script src="scripts/products.js"></script>
+    <script src="scripts/cart.js"></script>
     <script src="scripts/contact.js"></script>
 </body>
 </html>

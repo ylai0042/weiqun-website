@@ -4,6 +4,60 @@ class ProductManager {
         this.products = [
             {
                 id: 1,
+                category: 'tents',
+                name: '奥动帐篷',
+                nameEn: 'Aodong Tent',
+                nameJa: 'オードン テント',
+                nameKo: '아오동 텐트',
+                description: '专业奥动帐篷系列，包括快幕秀、拉网、升降台等多种类型，适用于各种户外活动和展览展示',
+                descriptionEn: 'Professional Aodong tent series, including pop-up displays, mesh tents, lifting platforms, suitable for various outdoor activities and exhibitions',
+                descriptionJa: 'プロフェッショナルオードンテントシリーズ、快幕秀、メッシュテント、リフティングプラットフォームを含む、様々なアウトドア活動や展示に適しています',
+                descriptionKo: '전문 아오동 텐트 시리즈, 팝업 디스플레이, 메쉬 텐트, 리프팅 플랫폼 포함, 다양한 야외 활동 및 전시에 적합',
+                image: 'aodong-tent.jpg',
+                specs: ['快幕秀系列', '拉网帐篷', '升降台', '多种尺寸'],
+                specsEn: ['Pop-up Display Series', 'Mesh Tent', 'Lifting Platform', 'Various Sizes'],
+                specsJa: ['快幕秀シリーズ', 'メッシュテント', 'リフティングプラットフォーム', '様々なサイズ'],
+                specsKo: ['팝업 디스플레이 시리즈', '메쉬 텐트', '리프팅 플랫폼', '다양한 크기'],
+                price: '询价'
+            },
+            {
+                id: 2,
+                category: 'flags',
+                name: '伟群牌沙滩旗杆',
+                nameEn: 'Weiqun Beach Flag Poles',
+                nameJa: 'ウェイチュン ビーチフラッグポール',
+                nameKo: '웨이췬 비치 깃발 폴',
+                description: '专业沙滩旗杆产品，包括多种材质和规格，适用于户外广告、品牌展示和活动标识',
+                descriptionEn: 'Professional beach flag poles, including various materials and specifications, suitable for outdoor advertising, brand display and event identification',
+                descriptionJa: 'プロフェッショナルビーチフラッグポール、様々な素材と仕様を含む、屋外広告、ブランド展示、イベント識別に適しています',
+                descriptionKo: '전문 비치 깃발 폴, 다양한 소재 및 규격 포함, 야외 광고, 브랜드 전시, 이벤트 식별에 적합',
+                image: 'beach-flag-poles.jpg',
+                specs: ['玻璃钢材质', '铝合金材质', '多种高度', '便携设计'],
+                specsEn: ['Fiberglass Material', 'Aluminum Material', 'Various Heights', 'Portable Design'],
+                specsJa: ['グラスファイバー素材', 'アルミ素材', '様々な高さ', 'ポータブルデザイン'],
+                specsKo: ['글래스파이버 소재', '알루미늄 소재', '다양한 높이', '휴대용 설계'],
+                price: '询价'
+            },
+            {
+                id: 3,
+                category: 'tents',
+                name: '帐篷框架',
+                nameEn: 'Tent Frame',
+                nameJa: 'テントフレーム',
+                nameKo: '텐트 프레임',
+                description: '专业帐篷框架系统，结构坚固，易于组装，适用于各种帐篷搭建需求',
+                descriptionEn: 'Professional tent frame system, sturdy structure, easy assembly, suitable for various tent setup needs',
+                descriptionJa: 'プロフェッショナルテントフレームシステム、頑丈な構造、簡単な組み立て、様々なテント設置ニーズに適しています',
+                descriptionKo: '전문 텐트 프레임 시스템, 견고한 구조, 쉬운 조립, 다양한 텐트 설치 요구에 적합',
+                image: 'tent-frame.jpg',
+                specs: ['铝合金框架', '不锈钢配件', '快速组装', '多种规格'],
+                specsEn: ['Aluminum Frame', 'Stainless Steel Accessories', 'Quick Assembly', 'Various Specifications'],
+                specsJa: ['アルミフレーム', 'ステンレスアクセサリー', '迅速組み立て', '様々な仕様'],
+                specsKo: ['알루미늄 프레임', '스테인리스 액세서리', '빠른 조립', '다양한 규격'],
+                price: '询价'
+            },
+            {
+                id: 4,
                 category: 'furniture',
                 name: '可折叠户外桌椅套装',
                 nameEn: 'Foldable Outdoor Table and Chair Set',
@@ -21,7 +75,61 @@ class ProductManager {
                 price: '起价 ¥599/套'
             },
             {
-                id: 2,
+                id: 5,
+                category: 'tents',
+                name: '快幕秀',
+                nameEn: 'Pop-up Display',
+                nameJa: '快幕秀',
+                nameKo: '팝업 디스플레이',
+                description: '快速搭建的快幕秀产品，适用于展览、活动、户外展示等多种场景',
+                descriptionEn: 'Quick-setup pop-up display products, suitable for exhibitions, events, outdoor displays and various scenarios',
+                descriptionJa: '迅速設置可能な快幕秀製品、展示、イベント、屋外展示など様々なシーンに適しています',
+                descriptionKo: '빠른 설치 팝업 디스플레이 제품, 전시, 이벤트, 야외 전시 등 다양한 시나리오에 적합',
+                image: 'popup-display.jpg',
+                specs: ['快速搭建', '便携设计', '多种尺寸', '品牌定制'],
+                specsEn: ['Quick Setup', 'Portable Design', 'Various Sizes', 'Brand Customization'],
+                specsJa: ['迅速設置', 'ポータブルデザイン', '様々なサイズ', 'ブランドカスタマイズ'],
+                specsKo: ['빠른 설치', '휴대용 설계', '다양한 크기', '브랜드 맞춤'],
+                price: '询价'
+            },
+            {
+                id: 6,
+                category: 'tents',
+                name: '拉网帐篷',
+                nameEn: 'Mesh Tent',
+                nameJa: 'メッシュテント',
+                nameKo: '메쉬 텐트',
+                description: '专业拉网帐篷，通风透气，适用于户外活动和临时搭建',
+                descriptionEn: 'Professional mesh tent, breathable and ventilated, suitable for outdoor activities and temporary setup',
+                descriptionJa: 'プロフェッショナルメッシュテント、通気性が良く、アウトドア活動や一時的な設置に適しています',
+                descriptionKo: '전문 메쉬 텐트, 통기성 좋음, 야외 활동 및 임시 설치에 적합',
+                image: 'mesh-tent.jpg',
+                specs: ['通风透气', '防蚊虫', '快速搭建', '多种规格'],
+                specsEn: ['Breathable', 'Mosquito-proof', 'Quick Setup', 'Various Specifications'],
+                specsJa: ['通気性', '防虫', '迅速設置', '様々な仕様'],
+                specsKo: ['통기성', '방충', '빠른 설치', '다양한 규격'],
+                price: '询价'
+            },
+            {
+                id: 7,
+                category: 'tents',
+                name: '升降台',
+                nameEn: 'Lifting Platform',
+                nameJa: 'リフティングプラットフォーム',
+                nameKo: '리프팅 플랫폼',
+                description: '专业升降台产品，可调节高度，适用于舞台、展览等多种应用场景',
+                descriptionEn: 'Professional lifting platform, adjustable height, suitable for stages, exhibitions and various application scenarios',
+                descriptionJa: 'プロフェッショナルリフティングプラットフォーム、高さ調整可能、ステージ、展示など様々な応用シーンに適しています',
+                descriptionKo: '전문 리프팅 플랫폼, 높이 조절 가능, 무대, 전시 등 다양한 응용 시나리오에 적합',
+                image: 'lifting-platform.jpg',
+                specs: ['高度可调', '安全可靠', '多种规格', '易于操作'],
+                specsEn: ['Adjustable Height', 'Safe and Reliable', 'Various Specifications', 'Easy to Operate'],
+                specsJa: ['高さ調整可能', '安全で信頼性', '様々な仕様', '操作簡単'],
+                specsKo: ['높이 조절 가능', '안전하고 신뢰성', '다양한 규격', '조작 용이'],
+                price: '询价'
+            },
+            {
+                id: 8,
                 category: 'tents',
                 name: '定制品牌大帐篷',
                 nameEn: 'Customized Branding Marquee',
@@ -36,10 +144,10 @@ class ProductManager {
                 specsEn: ['Custom Design', 'Brand Printing', 'Windproof & Waterproof', 'Quick Setup'],
                 specsJa: ['カスタムデザイン', 'ブランド印刷', '防風・防水', '迅速設置'],
                 specsKo: ['맞춤 디자인', '브랜드 인쇄', '방풍 방수', '빠른 설치'],
-                price: '起价 ¥1299/顶'
+                price: '询价'
             },
             {
-                id: 3,
+                id: 9,
                 category: 'flags',
                 name: '羽毛旗杆和底座',
                 nameEn: 'Feather Flag Poles and Bases',
@@ -54,7 +162,7 @@ class ProductManager {
                 specsEn: ['Fiberglass Material', 'Aluminum Material', 'Windproof Design', 'Portable Installation'],
                 specsJa: ['グラスファイバー素材', 'アルミ素材', '防風デザイン', 'ポータブル設置'],
                 specsKo: ['글래스파이버 소재', '알루미늄 소재', '방풍 설계', '휴대용 설치'],
-                price: '起价 ¥299/套'
+                price: '询价'
             },
             {
                 id: 4,
@@ -220,12 +328,17 @@ class ProductManager {
                     ${specs.map(spec => `<span class="spec-tag">${spec}</span>`).join('')}
                 </div>
                 <div class="product-price">${product.price}</div>
-                <button class="btn btn-primary product-btn" onclick="window.productManager.showProductModal(${product.id})">
-                    <i class="fas fa-info-circle"></i> 查看详情
-                </button>
-                <button class="btn btn-secondary product-btn" onclick="window.productManager.downloadProductInfo(${product.id})">
-                    <i class="fas fa-download"></i> 下载资料
-                </button>
+                <div class="product-actions">
+                    <button class="btn btn-primary product-btn" onclick="window.productManager.showProductModal(${product.id})">
+                        <i class="fas fa-info-circle"></i> 查看详情
+                    </button>
+                    <button class="btn btn-accent product-btn" onclick="window.addToCart(${product.id})">
+                        <i class="fas fa-shopping-cart"></i> 加入购物车
+                    </button>
+                    <button class="btn btn-secondary product-btn" onclick="window.productManager.downloadProductInfo(${product.id})">
+                        <i class="fas fa-download"></i> 下载资料
+                    </button>
+                </div>
             </div>
         `;
         
@@ -315,6 +428,9 @@ class ProductManager {
                     </div>
                 </div>
                 <div class="product-modal-footer">
+                    <button class="btn btn-accent" onclick="window.addToCart(${product.id}); window.productManager.closeProductModal();">
+                        <i class="fas fa-shopping-cart"></i> 加入购物车
+                    </button>
                     <button class="btn btn-primary" onclick="window.productManager.downloadProductInfo(${product.id})">
                         <i class="fas fa-download"></i> 下载详细资料
                     </button>
@@ -336,9 +452,16 @@ class ProductManager {
         
         window.addEventListener('click', (e) => {
             if (e.target === modal) {
-                modal.remove();
+                this.closeProductModal();
             }
         });
+    }
+    
+    closeProductModal() {
+        const modal = document.querySelector('.product-modal');
+        if (modal) {
+            modal.remove();
+        }
     }
     
     getApplicationScenarios(category) {
